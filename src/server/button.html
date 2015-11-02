@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+	<title>Socket.IO chat</title>
+  </head>
+  <body>
+	<button id="testButton">Press here to toggle the lights!</button>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script>
+	  var socket = io();
+	  $('#testButton').on("click", function(){
+	  	socket.emit('switch on');
+	  });
+	</script>
+  </body>
+</html>
