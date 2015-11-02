@@ -1,0 +1,23 @@
+.c-navigation-menu {
+  height: 60px;
+  width: 100%;
+  background: lightgray;
+}
+.c-navigation-menu__btn {
+  float: left;
+  height: 100%;
+  width: 15%;
+  background: lightgray;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-navigation-menu__btn:hover,
+.c-navigation-menu__btn:focus,
+.c-navigation-menu__btn:active {
+  background: lightgray;
+}

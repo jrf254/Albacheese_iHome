@@ -16,21 +16,21 @@ var ctx2 = canvas2.getContext('2d');
 var on = true;
 var walls = [];
 
-setBackground(addLighting);
+setBackground(removeLighting);
 addExterior();
 
-function setBackground(cb){
+function setBackground(cb, amount){
 	var backgroundImage = new Image();
 	backgroundImage.addEventListener("load", function(){
 		ctx.drawImage(backgroundImage, 0, 0);
 		if(cb != null){
-			cb();
+			cb(amount);
 		}
 	}, false);
 	backgroundImage.src = 'assets/house.png';
 }
 
-function addLighting(){
+function addLighting(amount){
 	on = true;
 	ctx.fillStyle = "rgba(0,0,0,.5)";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -38,7 +38,7 @@ function addLighting(){
 	for(i = 0; i < coordinates.length; i += 2){
 		var light = new Lamp({
 		    position: new Vec2(coordinates[i], coordinates[i+1]),
-		    distance: 100,
+		    distance: amount,
 		    samples: 50
 		});
 		var lighting = new Lighting({
@@ -67,10 +67,10 @@ function removeLighting(){
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
-socket.on('switch on', function(){
-	if(on == true){
+socket.on('switch on', function(amount){
+	if(amount == 0){
 		setBackground(removeLighting);
 	}else{
-		setBackground(addLighting);
+		setBackground(addLighting, amount);
 	}
 });

@@ -1,0 +1,56 @@
+@import "global/_tools.mixins.less";
+
+
+.c-menu-overlay {
+  height: ~"calc(100% - 60px)";
+  left: -300px;
+  background: #67809F;
+  width: 50%;
+  overflow: hidden;
+  .transitions;
+  position:absolute;
+  z-index: 1000;
+
+
+  &__option {
+    width: 100%;
+    padding: 20px;
+    background:#34495E;
+    color:white;
+    font-size: 20px;
+    border: 1px solid #34495E;
+    opacity: 1 !important;
+    margin: 0 !important;
+    outline: none !important;
+
+    &:hover, &:focus, &:active { background:#34495E - 30; }
+
+  }
+
+
+  &__header {
+    text-align: center;
+    color: snow;
+    padding: 20px;
+    font-size: 20px;
+
+  }
+
+
+  #menu-toggle:checked ~ & { left: 0; }
+
+}
+
+.c-gray-screen {
+  position: absolute;
+  z-index:-1;
+  background: rgba(211, 211, 211, 0);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  .transitions;
+
+
+  #menu-toggle:checked ~ & { background: rgba(211, 211, 211, 0.4); z-index:500 !important; }
+
+}

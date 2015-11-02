@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/master.css">
+
+        <title>Anagram App</title>
+    </head>
+    <body>
+        <div id="header">
+            <input type="checkbox" id="menu-toggle" style="display:none;"/>
+            <nav class="c-navigation-menu">
+                <label for="menu-toggle" class="c-navigation-menu__btn">&#9776;</label>
+            </nav>
+
+            <div class="c-gray-screen"></div>
+
+            <div class="c-menu-overlay">
+                <div class="c-menu-overlay__header">
+                    Albagram Game
+                </div>
+                <button id="newGameButton" class="c-menu-overlay__option">
+                    The Game
+                </button>
+
+                <button id="aboutButton" class="c-menu-overlay__option">
+                    About
+                </button>
+
+                <button id="creditsButton" class="c-menu-overlay__option">
+                    Credits
+                </button>
+            </div>
+        </div>
+        <div id="home" class="view hidden">
+            This is the home screen
+        </div>
+        <div id="game" class="view">
+            <button id="testButton">Press here to toggle the lights!</button>
+        </div>
+
+        <div id="credits" class="credits-background view hidden">
+            <div class ="name" style="padding-bottom:10px;">
+                Credits
+            </div>
+            <div class="credits-row">
+                <img class= "img-radius" src="img/splash_image.png" >
+            </div>
+             <div class ="name" style="padding-top:10px;">
+                Developed by:
+            </div>
+            <div class="credits-row">
+                <p align="" > Duke Ayers</p>
+                <img class= "img-radius" src="img/duke.png" >
+            </div>
+            <div class="credits-row">
+                <img class= "img-radius" src="img/ryan.png" >
+                 <p align="" > Ryan Dooley</p>
+            </div>
+            <div class="credits-row">
+                <p align="" >Jorge Felix</p>
+                <img class= "img-radius" src="img/jorge.png" >
+            </div>
+            <div class="credits-row">
+                <img class= "img-radius" src="img/josh.png" >
+                 <p align="" > Josh Frampton</p>
+        	</div>
+        </div>
+        <!--<div class="app">-->
+            <!--Penis-->
+            <!--&lt;!&ndash;<h1>Apache Cordova</h1>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div id="deviceready" class="blink">&ndash;&gt;-->
+                <!--&lt;!&ndash;<p class="event listening">Connecting to Device</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p class="event received">Device is Ready</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+        <script type="text/javascript" src="../../socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
