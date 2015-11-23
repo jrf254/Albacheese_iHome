@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         mWebView.setWebViewClient(new WebViewClient());
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        mWebView.loadUrl("http://192.168.1.4:3000/app");
+        mWebView.loadUrl("http://24.206.240.31:3000/app");
     }
 
     @Override
