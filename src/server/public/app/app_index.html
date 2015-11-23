@@ -22,28 +22,23 @@
    
     <!-- Left Panel with Reveal effect -->
     <div class="panel panel-left panel-cover">
-      <div class="content-block">
-        <div class="content-block-title">Mail App</div>
-          <div class="list-block media-list">
-            <ul>
-              <li>
-                <a href="#" class="item-link item-content">
-                  <div class="item-inner">
-                    <div class="item-title-row">
-                      <div class="item-title">Facebook</div>
-                      <div class="item-after">17:14</div>
-                    </div>
-                    <div class="item-subtitle">New messages from John Doe</div>
-                    <div class="item-text">Lorem ipsum dolor sit amet...</div>
-                  </div>
-                </a>
-              </li>                 
-            </ul>
-          </div>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="center">Options</div>
+        </div>
+      </div>
+      <div class="page-contet">
         <!-- Link to another page -->
-        <a href="about.html">About app</a>
-        <!-- Click on link with "close-panel" class will close panel -->
-        <p><a href="#" class="close-panel">Close me</a></p>
+        <div class="list-block">
+          <ul>
+            <li>
+              <a href="#" class="back list-button item-link">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="list-button item-link">About app</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <!-- Views -->
@@ -54,7 +49,6 @@
         <div class="pages navbar-fixed toolbar-fixed">
           <!-- Page, "data-page" contains page name -->
           <div data-page="index" class="page">
- 
             <!-- Top Navbar. In Material theme it should be inside of the page-->
             <div class="navbar">
               <div class="navbar-inner">
@@ -68,7 +62,41 @@
             </div>
             <!-- Scrollable page content -->
             <div class="page-content">
-              <a href="#" class="button button-raised">Button</a>
+              <div class="content-block-title">House lights</div>
+              <div class="card">
+                <div class="list-block">
+                  <ul>
+                    <li>
+                      <a href="#" class="list-button item-link lightToggleButton" id="100">100%</a>
+                    </li>
+                    <li>
+                      <a href="#" class="list-button item-link lightToggleButton" id="75">75%</a>
+                    </li>
+                    <li>
+                      <a href="#" class="list-button item-link lightToggleButton" id="50">50%</a>
+                    </li>
+                    <li>
+                      <a href="#" class="list-button item-link lightToggleButton" id="25">25%</a>
+                    </li>
+                    <li>
+                      <a href="#" class="list-button item-link lightToggleButton" id="0">0%</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content-block-title">Alarm System</div>
+              <div class="card">
+                <div class="list-block">
+                  <ul>
+                    <li>
+                      <a href="#" class="list-button item-link alarmToggleButton" id="arm">Arm</a>
+                    </li>
+                    <li>
+                      <a href="#" class="list-button item-link alarmToggleButton" id="disarm">Disarm</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>    
             </div>
           </div>
         </div>
@@ -78,8 +106,6 @@
     <script type="text/javascript" src="js/framework7.min.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html> 

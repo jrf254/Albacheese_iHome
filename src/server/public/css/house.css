@@ -1,7 +1,9 @@
 body {
-	color: #30363b
+	background-color: #30363b
 }
 
 canvas {
     position: absolute;
+    left: 15.5%;
+    top: 4%;
 }

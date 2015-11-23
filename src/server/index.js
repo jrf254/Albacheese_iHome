@@ -16,15 +16,26 @@ app.get('/button', function(req, res){
 });
 
 app.get('/app', function(req, res){
-  res.sendFile(__dirname + '/app_index.html');
+  res.sendFile(__dirname + '/public/app/app_index.html');
 });
+
+var currentLights = 0;
+
+var currentAlarm = "disarm";
 
 io.emit('some event', { for: 'everyone' });
 
 io.on('connection', function(socket){
-  console.log('New connection from ' + socket.request.connection.remoteAddress);
+	io.emit('update', currentLights, currentAlarm);
+  console.log('New connection from ' + socket.request.connection.remoteAddress + " " + currentLights + " " + currentAlarm);
+
+  socket.on('alarm on', function(amount){
+  	currentAlarm = amount;
+    io.emit('update', currentLights, currentAlarm);
+  });  
+
   socket.on('switch on', function(amount){
-  	console.log(amount);
-    io.emit('switch on', amount);
+  	currentLights = amount;
+    io.emit('update', currentLights, currentAlarm);
   });
 });
